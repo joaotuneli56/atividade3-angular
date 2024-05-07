@@ -1,0 +1,28 @@
+{
+  "fornecedores": [
+    {
+      "id": "3",
+      "nome": "Fornecedor C",
+      "email": "fornecedor_c@example.com",
+      "material": "Alumínio"
+    },
+    {
+      "id": "4",
+      "nome": "Fornecedor D",
+      "email": "fornecedor_d@example.com",
+      "material": "Madeira"
+    },
+    {
+      "id": "5",
+      "nome": "Fornecedor E",
+      "email": "fornecedor_e@example.com",
+      "material": "Ferro"
+    },
+    {
+      "id": "6",
+      "nome": "Fornecedor F",
+      "email": "fornecedor_f@example.com",
+      "material": "Vidro"
+    }
+  ]
+}
