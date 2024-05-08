@@ -2,14 +2,15 @@ import { FornecedorService } from './../../services/fornecedor.service';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { Fornecedor } from '../../interfaces/fornecedore';
+import { Fornecedor } from '../../interfaces/fornecedor';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-fornecedores',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, NavbarComponent],
   templateUrl: './fornecedores.component.html',
   styleUrl: './fornecedores.component.css'
 })
@@ -21,8 +22,7 @@ export class FornecedoresComponent {
   constructor(private fornecedorService: FornecedorService, private formBuilder: FormBuilder) {
     this.fornecedorForm = this.formBuilder.group({
       nome: ['', Validators.required],
-      emial: ['', Validators.required],
-      material: ['', Validators.required]
+      email: ['', Validators.required],
     });
   }
 
@@ -38,15 +38,14 @@ export class FornecedoresComponent {
 
   insert() {
     if (this.fornecedorForm.valid) {
-      const forncedorAdd: Fornecedor = {
+      const fornecedorAdd: Fornecedor = {
         id: this.generateRandomString(5),
         nome: this.fornecedorForm.value.nome,
         email: this.fornecedorForm.value.email,
-        material: this.fornecedorForm.value.material
       };
-      this.fornecedor.push(forncedorAdd);
+      this.fornecedor.push(fornecedorAdd);
       this.fornecedorForm.reset();
-      this.fornecedorService.add(forncedorAdd).subscribe();
+      this.fornecedorService.add(fornecedorAdd).subscribe();
       alert('Inserido com sucesso!')
     }
   }

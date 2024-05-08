@@ -2,9 +2,8 @@
   "fornecedores": [
     {
       "id": "3",
-      "nome": "Fornecedor C",
-      "email": "fornecedor_c@example.com",
-      "material": "Alumínio"
+      "nome": "Fornecedor 3",
+      "email": "FORNECEDOR3@example.com"
     },
     {
       "id": "4",
@@ -23,6 +22,30 @@
       "nome": "Fornecedor F",
       "email": "fornecedor_f@example.com",
       "material": "Vidro"
+    },
+    {
+      "id": "7",
+      "nome": "Fornecedor G",
+      "email": "fornecedor_g@example.com",
+      "material": "Plástico"
+    },
+    {
+      "id": "8",
+      "nome": "Fornecedor H",
+      "email": "fornecedor_h@example.com",
+      "material": "Aço"
+    },
+    {
+      "id": "9",
+      "nome": "Fornecedor I",
+      "email": "fornecedor_i@example.com",
+      "material": "Cerâmica"
+    },
+    {
+      "id": "10",
+      "nome": "Fornecedor J",
+      "email": "fornecedor_j@example.com",
+      "material": "Tecido"
     }
   ]
 }

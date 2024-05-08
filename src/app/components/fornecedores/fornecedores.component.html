@@ -1,30 +1,28 @@
-<form [formGroup]="fornecedorForm" (ngSubmit)="insert()">
-  <label>
-      Nome:
-      <input type="text" formControlName="nome">
-  </label>
-  <label>
-      Email:
-      <input type="text" formControlName="telefone">
-  </label>
-  <label>
-      Material:
-    <input type="text" formControlName="material">
-</label>
-  <button type="submit">Submit</button>
+<app-navbar></app-navbar>
+<form [formGroup]="fornecedorForm" (ngSubmit)="insert()" class="row g-3 m-4">
+  <div class="col-md-6">
+    <label for="nome" class="form-label">Nome:</label>
+    <input type="text" id="nome" class="form-control" formControlName="nome">
+  </div>
+  <div class="col-md-6">
+    <label for="email" class="form-label">Email:</label>
+    <input type="text" id="email" class="form-control" formControlName="email">
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Cadastrar Fornecedor</button>
+  </div>
 </form>
 
 <hr>
-
-fornecedor
-<ul>
-  <!-- Percorrer a lista de fornecedor com o novo for do angular 17 -->
-  @for (item of fornecedor; track $index)
-  {
-  <li>
-      {{item.nome}} - {{item.email}} <input type="button" (click)="remover(item.id)" value="remover" />
-      <a href="/fornecedores/{{item.id}}" >editar</a>
-  </li>
-  }
-
-</ul>
+<div class="border border-primary rounded-3 border-5 p-2 mx-2">
+  <h2 class="my-2">Fornecedores</h2>
+  <ul class="list-group">
+    <li *ngFor="let item of fornecedor; let i = index" class="list-group-item d-flex justify-content-between align-items-center">
+      {{ item.id }} - {{ item.nome }} - {{ item.email }}
+      <div>
+        <button type="button" class="btn btn-danger px-2 mx-2" (click)="remover(item.id)">Remover</button>
+        <a href="/fornecedores/{{ item.id }}" class="btn btn-primary">Editar</a>
+      </div>
+    </li>
+  </ul>
+</div>

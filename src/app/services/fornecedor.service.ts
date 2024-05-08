@@ -1,6 +1,6 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Fornecedor } from '../interfaces/fornecedore';
+import { Fornecedor } from '../interfaces/fornecedor';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,6 +11,7 @@ export class FornecedorService {
   private apiUrl = 'http://localhost:3000/fornecedores'
   constructor(private http: HttpClient) {
   }
+
   list(): Observable<Fornecedor[]>{
     return this.http.get<Fornecedor[]>(this.apiUrl) as Observable<Fornecedor[]>;
   }
@@ -25,17 +26,17 @@ export class FornecedorService {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
 
-  add(cliente: Fornecedor) {
+  add(fornecedor: Fornecedor) {
     const httpHeaders =
     {
       headers: {
         'Content-Type': 'application/json'
       }
     };
-    return this.http.post(this.apiUrl, cliente, httpHeaders);
+    return this.http.post(this.apiUrl, fornecedor, httpHeaders);
   }
 
-  update(cliente: Fornecedor) {
+  update(fornecedor: Fornecedor) {
     const httpHeaders =
     {
       headers: {
@@ -43,8 +44,8 @@ export class FornecedorService {
       }
     };
 
-    console.log(cliente)
-    console.log(`${this.apiUrl}/${cliente.id}`)
-    return this.http.put(`${this.apiUrl}/${cliente.id}`, cliente, httpHeaders);
+    console.log(fornecedor)
+    console.log(`${this.apiUrl}/${fornecedor.id}`)
+    return this.http.put(`${this.apiUrl}/${fornecedor.id}`, fornecedor, httpHeaders);
   }
 }
