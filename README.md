@@ -1,27 +1,64 @@
-# Atividade3
+# Atividade Fornecedores 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+### **Objetivo do Exercício:**
 
-## Development server
+Implementar as operações básicas CRUD (Create, Read, Update, Delete) para um sistema de gestão de fornecedores.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### **Descrição do Exercício:**
 
-## Code scaffolding
+1. **Create (Criar):**
+  - Crie uma classe ou estrutura para representar um fornecedor. O fornecedor deve ter pelo menos os seguintes atributos: ID, nome, endereço e telefone.
+  - Implemente uma função ou método para adicionar um novo fornecedor ao sistema, solicitando ao usuário que insira as informações necessárias.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. **Read (Ler):**
+  - Implemente uma função ou método para exibir todos os fornecedores cadastrados no sistema, mostrando todos os seus atributos.
+3. **Update (Atualizar):**
+  - Implemente uma função ou método para atualizar as informações de um fornecedor existente. Solicite ao usuário que insira o ID do fornecedor que deseja atualizar e, em seguida, permita que eles atualizem as informações do fornecedor.
+  
+4. *Delete (Excluir):*
+  - Implemente uma função ou método para excluir um fornecedor do sistema. Solicite ao usuário que insira o ID do fornecedor que deseja excluir e remova-o da lista de fornecedores.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Como rodar o projeto
 
-## Running unit tests
+- [ ] 1º Clonar o repositorio Github.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+git clone https://github.com/joaotuneli56/atividade3-angular.git
+```
 
-## Running end-to-end tests
+- [ ] 2° Entrar no repositorio 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```git
+cd atividade3-angular
+```
 
-## Further help
+- [ ] 3º instalar o angular e suas dependencias no projeto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+npm install -g @angular/cli
+```
+
+- [ ] 4º remover os erros de imports e fazer o rebuild
+
+```
+Set-ExecutionPolicy RemoteSigned
+```
+
+- [ ] 5º Sincronizar o npm e suas instancias
+
+```
+npm install
+```
+
+- [ ] 6º Abra um terminal separado para rodar o servidor
+
+```
+npm run server
+```
+
+- [ ] 7º Rode o projeto
+
+```
+ng serve
+```
